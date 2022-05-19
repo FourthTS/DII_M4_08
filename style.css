@@ -27,3 +27,16 @@
 .toggleOff{
     background-color: darkgray;
 }
+.out-container{
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+}
+#out-container{
+    flex-basis: 200px;
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    text-align: center;
+    font-size: 1rem;
+}
