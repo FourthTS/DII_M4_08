@@ -18,7 +18,41 @@ document.getElementById('ok').addEventListener('click',function(e){
 //         alert(list.innerText)
 //     })
 // }
+// document.getElementById('ok').addEventListener('click',function(e){
+   
+//     let noElementS = document.getElementById('no')
+//     if(noElementS.classList.contains('toggleOn')){
+//         noElementS.classList.replace('toggleOn','toggleOff')
+//     }else if(noElementS.classList.contains('toggleOff')){
+//         noElementS.classList.replace('toggleOff','toggleOn')
+//     }else{
+//         noElementS.classList.add('toggleOn')
+//     }
+// })
+let margin = 20
 document.getElementById('ok').addEventListener('click',function(e){
-    document.getElementById('no').classList.add('toggleOn')//class list is array
-    console.log(document.getElementById('no'));
+    margin +=10
+    let newMargin = `20px ${margin}px`
+    document.getElementById('ok').style.margin = newMargin
 })
+showText= ['ก็','ไม่','รู้','สิ','นะ']
+showIndex = 0
+document.getElementById('cancel').addEventListener('click',function(e){
+    showIndex++;
+    console.log(showIndex);
+    console.log(showText.length);
+    if(showIndex >= (showText.length)){
+        showIndex = 0
+    }
+    document.getElementById('ok').innerHTML=showText[showIndex]
+    
+    
+    /*if(document.getElementById('ok').innerHTML === 'ok'){
+        document.getElementById('ok').innerHTML='kub'
+    }else if(document.getElementById('ok').innerHTML === 'kub'){
+        document.getElementById('ok').innerHTML='pom'
+    }*/
+    
+    
+})
+console.log();
