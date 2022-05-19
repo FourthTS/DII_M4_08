@@ -8,6 +8,7 @@ function addText(){
     let newButton = document.createElement('button')
     newButton.classList.add('btn')
     newButton.classList.add('btn-outline-primary')
+    newButton.classList.add('m-2')
     newButton.setAttribute('type','button')
     newButton.innerText = text
     output.appendChild(newButton)
