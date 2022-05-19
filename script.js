@@ -1,8 +1,9 @@
 var searchButton = document.getElementById('searchButton') 
 var inputText = document.getElementById('inputText')
 var output = document.getElementById('output')
-
+let sumClick = 0
 function addText(){
+    sumClick++
     let text = inputText.value
     console.log(text);
     let newButton = document.createElement('button')
@@ -12,5 +13,7 @@ function addText(){
     newButton.setAttribute('type','button')
     newButton.innerText = text
     output.appendChild(newButton)
+    document.getElementById('badge').innerHTML=sumClick
 }
 searchButton.addEventListener('click',addText)
+inputText.addEventListener('blur',addText)
